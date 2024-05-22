@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #273c75; /* Deep blue */
+    --secondary-color: #ffffff; /* White */
+    --background-color: #f4f4f4; /* Light grey */
+    --font-main: 'Inter', sans-serif;
+    --verde-principal: #55efc4;
+    --azul-terceiro: #0984e3;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+header .linha-cabeçalho a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.container {
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+    
+}
+
+.container__caixa, .container__descricao {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 30px;  /* Increased padding for more space inside */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 6em;  /* You can adjust this margin if needed */
+        width: auto; /* Adjust width as needed, or use percentages */
+    
+    
+}
+
+.container__imagem, .secundario__imagem {
+    max-width: 90%;
+    height: auto;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: #adf;
+    text-decoration: none;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--verde-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: black;
+    font-size: 20px;
+}
+
+.secundario {
+    align-items: center;
+    margin: 5em 5em;
+}
+
+.login, .cadastro {
+    color: var(--secondary-color);
+}
+
+.login:hover, .cadastro:hover {
+    color: var(--verde-principal);
+    text-decoration: underline;
+}
+
+.lista__links a:hover {
+    color: var(--azul-terceiro);
+    text-decoration: none;
+}
+
+.lista__links a:active {
+    color: var(--azul-terceiro);
+}
+
+.principal {
+    align-items: center;
+    width: auto;
+    margin: auto;
+    display: flex;
+    margin: 5em 5em;
+}
+
+.primaria__imagem {
+    width: 90%;
+    height: auto; /* Ensures the aspect ratio is maintained */
+}
