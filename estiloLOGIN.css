@@ -1,0 +1,158 @@
+
+:root {
+    --verde-principal: #55efc4;
+    --branco-secundario: #FFFF;
+    --cor-de-fundo: #0984e3;
+    --fonte-principal: "Inter";
+    --cinza-primario: #f0ffff94;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-de-fundo);
+    
+}
+
+body *{
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo);
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: var(--cor-de-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 40px;
+    color:var(--verde-principal);
+}
+
+.left-login-image{  
+    width: 30vw;
+    display: flexbox;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.rigth-login{
+    width: 40vw;
+    display: flexbox;
+    justify-content: start;
+    align-items: flex-start;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column;
+    padding: 30px 35px;
+    background:var(--cor-de-fundo);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: var(--verde-principal);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--cor-de-fundo);
+    color: var(--branco-secundario);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    color:var(--branco-secundario);
+    margin-bottom: 10px;
+
+}
+
+.textfield > input::placeholder {
+    color: va;
+}
+
+.bt_login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color:var(--cinza-primario);
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.botao{
+    background: #00ff88;
+    text-decoration: none
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .rigth-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-image{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90%;
+    }
+}
