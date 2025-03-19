@@ -11,10 +11,10 @@
     <div class="container">
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
-            <form class="end-form-container">
+            <form class="end-form-container" id="saveScoreForm">
                 <h2 id="end-text">Escreva seu nome e compartilhe sua pontuação!</h2>
-                <input type="text" name="name" id="username" placeholder="Escreva seu nome">
-                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)"disabled> <a href="/UPX IV/contagem/highscores.html" class="btn">Salvar</a></button>
+                <input type="text" name="name" id="username" placeholder="Escreva seu nome" required>
+                <button class="btn" id="saveScoreBtn" type="submit" disabled>Salvar</button>
             </form>
             <a href="../contagem/game.html" class="btn">Jogar Novamente</a>
             <a href="../home.html" class="btn">Página Inicial<i class="fas fa-home"></i></a>
