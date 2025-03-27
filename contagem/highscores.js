@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Exibindo os high scores
     highScoresList.innerHTML = highScores.map(score => {
-        return `<li class="high-score">${score.name} - ${score.score}</li>`;
+        return `<li class="high-score">${score.name} - ${score.score} pontos </li>`;
     }).join("");
-
+/*
     // Função de verificação da pontuação
     function valueVerification(score, name) {
         if (score < 200) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             highScoresRank.innerHTML = `Felizmente você atingiu a pontuação mínima para passar ao próximo módulo`;
         }
     }
-
+*/
     // Acesse a pontuação mais recente armazenada
     const mostRecentScore = localStorage.getItem('mostRecentScore');
     const mostRecentName = localStorage.getItem('mostRecentName');
