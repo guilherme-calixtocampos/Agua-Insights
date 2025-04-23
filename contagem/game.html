@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Água Insights | Questões </title>
+    <link rel="stylesheet" href="./game.css">
+    <link rel="stylesheet" href="./styleGAME.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</head>
+</head>
+<header class="titulo">
+    <h1 class="text-6xl my-4 nome">Água Insights</h1>
+    <div class="linha-cabeçalho">
+        <a href="../home.html" class="text-xl footer">Home</a>
+        <a href="../noticias.html" class="text-xl footer">Noticias</a>
+        <a href="index.html" class="text-xl footer">Game</a>
+        <a href="../login.html" class="text-xl footer">Faça login</a>
+        <a href="../cadastro.html" class="text-xl footer">Faça cadastro</a>
+    </div>
+</header>
+<body class="flex flex-col">
+    
+    <div class="container-game">
+        <div id="game" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <p id="progressText" class="hud-prefix">
+                        Questão
+                    </p>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Pontuação
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <h1 id="question" class="question">Responda as seguintes perguntas para salvar o planeta...</h1>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    </div>
+    <script src="./game.js"></script>
+    <p class="text-4xl m-4 max-w-xs text-center rounded-xl p-4 out"><a href="../home.html">Quero sair do game!</a></p>
+</body>
+</html>
