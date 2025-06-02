@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-cadastro.css">
+    <link rel="stylesheet" href="style-home.css">
+    <title>Água Insights | Cadastro</title>
+</head>
+<body>
+    <header class="titulo">
+        <h1 class="text-6xl my-4 nome">Água Insights</h1>
+        <div class="linha-cabeçalho">
+            <a href="home.html" class="text-xl footer">Home</a>
+            <a href="noticias.html" class="text-xl footer">Notícias</a>
+            <a href="contagem/index.html" class="text-xl footer">Game</a>
+            <a href="login.html" class="text-xl footer">Faça login</a>
+            <a href="cadastro.html" class="text-xl footer">Faça cadastro</a>
+        </div>
+    </header>
+
+    <div class="rigth-login">
+        <div class="card-login">
+            <h1>Cadastro</h1>
+            <form id="form-cadastro">
+                <div class="textfield">
+                    <label for="email">Usuário (email)</label>
+                    <input type="text" id="email" name="usuario" placeholder="Digite seu email">
+                </div> 
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                </div>
+                <div class="textfield">
+                    <label for="confirmar-senha">Confirme a senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha">
+                </div>
+                <button type="submit" class="bt_login">Cadastrar</button>
+            </form>
+        </div>    
+    </div>
+
+    <script>
+      document.getElementById('form-cadastro').addEventListener('submit', function(event) {
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+        const confirmarSenha = document.getElementById('confirmar-senha');
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+
+        if (!emailRegex.test(email.value)) {
+          alert('Por favor, insira um email válido.');
+          event.preventDefault();
+          return;
+        }
+
+        if (!senhaRegex.test(senha.value)) {
+          alert('A senha deve conter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.');
+          event.preventDefault();
+          return;
+        }
+
+        if (senha.value !== confirmarSenha.value) {
+          alert('As senhas não coincidem.');
+          event.preventDefault();
+        }
+      });
+    </script>
+</body>
+</html>
